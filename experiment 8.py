@@ -1,18 +1,15 @@
-# Open the input file in read mode
-with open("input.txt", "r") as infile:
-    lines = infile.readlines()          # read all lines into a list
+with open("input.txt", "w") as f:
+    f.write("Line 1: Python File Handling\n")
+    f.write("Line 2: Reading and Writing Files\n")
+    f.write("Line 3: Counting total lines\n")
 
-# Count the number of lines
-print("Total number of lines:", len(lines))
+with open("input.txt", "r") as f:
+    lines = f.readlines()
 
-# Extract the first two lines
-first_two = lines[:2]
-print("First two lines:")
-for line in first_two:
-    print(line.strip())
+print("Total lines:", len(lines))
 
-# Write the extracted lines to a new file
-with open("output.txt", "w") as outfile:
-    outfile.writelines(first_two)
+extracted_lines = lines[:2]
+with open("output.txt", "w") as f:
+    f.writelines(extracted_lines)
 
-print("Extracted lines written to output.txt")
+print("Extracted lines saved to output.txt")
