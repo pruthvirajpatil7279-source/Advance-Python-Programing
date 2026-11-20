@@ -1,0 +1,64 @@
+
+1. student marks analysis system 
+
+import numpy as np
+import pandas as pd
+
+# Create NumPy array of marks
+marks = np.array([75, 85, 90, 65, 95])
+
+# Calculate statistics
+print("Mean:", np.mean(marks))
+print("Median:", np.median(marks))
+print("Maximum:", np.max(marks))
+print("Minimum:", np.min(marks))
+
+# Create Pandas DataFrame
+data = {
+    "Name": ["Rahul", "Amit", "Priya", "Sneha", "Rohan"],
+    "Marks": marks
+}
+
+df = pd.DataFrame(data)
+
+print("\nStudent Records:")
+print(df)
+
+# Display students scoring more than 80
+print("\nStudents scoring more than 80:")
+print(df[df["Marks"] > 80])
+
+
+
+
+
+
+
+2. Employee salary analysis system 
+
+
+import numpy as np
+import pandas as pd
+
+# Create NumPy array of salaries
+salary = np.array([45000, 65000, 75000, 50000, 90000])
+
+# Calculate statistics
+print("Average Salary:", np.mean(salary))
+print("Maximum Salary:", np.max(salary))
+print("Minimum Salary:", np.min(salary))
+
+# Create Pandas DataFrame
+data = {
+    "Name": ["Rahul", "Amit", "Priya", "Sneha", "Rohan"],
+    "Salary": salary
+}
+
+df = pd.DataFrame(data)
+
+print("\nEmployee Records:")
+print(df)
+
+# Display employees earning more than 60000
+print("\nEmployees earning more than 60000:")
+print(df[df["Salary"] > 60000])
